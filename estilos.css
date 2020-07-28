@@ -9,6 +9,9 @@
   .grilla h3{
     display: none;
   }
+  h3{
+    text-align: left;
+  }
 }
 @media (min-width: 728px){
   .grilla{
@@ -21,6 +24,9 @@
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .grilla-simple > *{
+    text-align: center;
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
@@ -75,9 +81,11 @@ a{
 abbr{
   cursor: pointer;
 }
+h1, h2{
+  text-align: center;
+}
 h1, h2, h3{
   margin: 0;
-  text-align: center;
   text-transform: uppercase;
 }
 h2{
@@ -102,9 +110,7 @@ main{
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   grid-gap: 1em;
 }
-.grilla-simple > *{
-  text-align: center;
-}
+
 time{
   font-style: italic;
   font-weight: 200;
