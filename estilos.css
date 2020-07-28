@@ -1,0 +1,117 @@
+@media (max-width: 728px) {
+  .grilla{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .grilla > div{
+    margin: 1em;
+  }
+  .grilla h3{
+    display: none;
+  }
+}
+@media (min-width: 728px){
+  .grilla{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-gap: 1em;
+  }
+  .grilla > div{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root{
+  font-size: calc(0.8rem + 0.4vmax);
+}
+body{
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+  font-size: 1.5em;
+  text-align: center;
+  background-color:rgb(36, 41, 46);
+  color: rgb(255, 255, 255);
+  padding: 1em 0;
+}
+header img{
+  border-radius: 50%;
+  max-width: 150px;
+  width: 100%;
+}
+header div{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+header div i{
+  display: inline-block;
+  margin: 0 0.1em 0.1em 0;
+}
+.github{
+  color:rgb(36, 41, 46);
+}
+.linkedin{
+  color: rgb(0, 119, 181);
+}
+.github, .linkedin, a{
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+.github:hover, .linkedin:hover, a:hover{
+  opacity: 0.5;
+}
+a{
+  color: inherit;
+  font-weight: 400;
+}
+abbr{
+  cursor: pointer;
+}
+h1, h2, h3{
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2{
+  margin: 2em 0 0;
+  font-weight: 800;
+  border-bottom: 4px solid rgb(36, 41, 46);
+}
+h3{
+  margin-top: 0.5em;
+  font-weight: 700;
+}
+p{
+  margin: 0;
+}
+main{
+  font-size: 1.25em;
+  margin: 1em;
+  padding-bottom: 5em;
+}
+.grilla-simple{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-gap: 1em;
+}
+.grilla-simple > *{
+  text-align: center;
+}
+time{
+  font-style: italic;
+  font-weight: 200;
+}
+.grilla, .grilla-simple{
+  font-weight: 400;
+}
+.grilla > div > p:first-child{
+  font-weight: 700;
+}
